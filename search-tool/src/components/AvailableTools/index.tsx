@@ -8,9 +8,16 @@ interface ToolsProps {
   icon: string
   link: string
   name: string
+  openModal?: boolean
 }
 
-export function AvailableTools({ color, icon, link, name }: ToolsProps) {
+export function AvailableTools({
+  color,
+  icon,
+  link,
+  name,
+  openModal = false,
+}: ToolsProps) {
   return (
     <>
       <Dialog.Root>
@@ -20,13 +27,9 @@ export function AvailableTools({ color, icon, link, name }: ToolsProps) {
             <button>{name}</button>
           </Card>
         </Dialog.Trigger>
-        <OpenToolModal
-          openModal
-          icon={icon}
-          link={link}
-          color={color}
-          name={name}
-        />
+        {openModal ? (
+          <OpenToolModal icon={icon} link={link} color={color} name={name} />
+        ) : null}
       </Dialog.Root>
     </>
   )

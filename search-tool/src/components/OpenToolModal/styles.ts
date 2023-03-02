@@ -14,6 +14,7 @@ interface BackgroundHeighlightProps {
 }
 
 export const Content = styled(Dialog.Content)<BackgroundHeighlightProps>`
+  width: 60vw;
   min-width: 32rem;
   border-radius: 6px;
   padding: 2.5rem 3rem;
@@ -65,4 +66,9 @@ export const ModalContainer = styled.div<BackgroundHeighlightProps>`
 
 export const Title = styled(Dialog.Title)`
   text-align: center;
+`
+
+export const LastToolsContainer = styled.div`
+  width: 100%;
+  background: #fff;
 `

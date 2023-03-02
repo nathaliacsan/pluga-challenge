@@ -32,6 +32,7 @@ export function Tools() {
             return (
               <div key={tool.app_id}>
                 <AvailableTools
+                  openModal
                   color={tool.color}
                   icon={tool.icon}
                   name={tool.name}
