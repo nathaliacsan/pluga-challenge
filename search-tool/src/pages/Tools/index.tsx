@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import { requestTools } from '../../services/SearchTools'
 import { SearchTools } from '../../components/SearchTools'
-import { ToolsContainer, CardsContainer, Card } from './styles'
+import { ToolsContainer, CardsContainer } from './styles'
 
 import * as Dialog from '@radix-ui/react-dialog'
 import { OpenToolModal } from '../../components/OpenToolModal'
+import { AvailableTools } from '../../components/AvailableTools'
 
 interface Tool {
   app_id: string
@@ -33,10 +34,11 @@ export function Tools() {
             return (
               <Dialog.Root key={tool.app_id}>
                 <Dialog.Trigger asChild>
-                  <Card variant={tool.color}>
-                    <img src={tool.icon} alt="" />
-                    <button>{tool.name}</button>
-                  </Card>
+                  <AvailableTools
+                    color={tool.color}
+                    icon={tool.icon}
+                    name={tool.name}
+                  />
                 </Dialog.Trigger>
                 <OpenToolModal
                   icon={tool.icon}
