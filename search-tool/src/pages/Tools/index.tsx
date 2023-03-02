@@ -3,8 +3,6 @@ import { requestTools } from '../../services/SearchTools'
 import { SearchTools } from '../../components/SearchTools'
 import { ToolsContainer, CardsContainer } from './styles'
 
-import * as Dialog from '@radix-ui/react-dialog'
-import { OpenToolModal } from '../../components/OpenToolModal'
 import { AvailableTools } from '../../components/AvailableTools'
 
 interface Tool {
@@ -32,21 +30,14 @@ export function Tools() {
         <CardsContainer>
           {tools.map((tool) => {
             return (
-              <Dialog.Root key={tool.app_id}>
-                <Dialog.Trigger asChild>
-                  <AvailableTools
-                    color={tool.color}
-                    icon={tool.icon}
-                    name={tool.name}
-                  />
-                </Dialog.Trigger>
-                <OpenToolModal
-                  icon={tool.icon}
-                  link={tool.link}
+              <div key={tool.app_id}>
+                <AvailableTools
                   color={tool.color}
+                  icon={tool.icon}
                   name={tool.name}
+                  link={tool.link}
                 />
-              </Dialog.Root>
+              </div>
             )
           })}
         </CardsContainer>
