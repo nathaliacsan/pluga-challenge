@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { requestTools } from '../../services/SearchTools'
-import { SearchForm } from './components/SearchForm'
+import { SearchTools } from '../../components/SearchTools'
 import { ToolsContainer, CardsContainer, Card } from './styles'
 
 import * as Dialog from '@radix-ui/react-dialog'
@@ -27,7 +27,7 @@ export function Tools() {
   return (
     <>
       <ToolsContainer>
-        <SearchForm />
+        <SearchTools />
         <CardsContainer>
           {tools.map((tool) => {
             return (

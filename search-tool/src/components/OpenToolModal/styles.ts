@@ -62,3 +62,7 @@ export const ModalContainer = styled.div<BackgroundHeighlightProps>`
     }
   }
 `
+
+export const Title = styled(Dialog.Title)`
+  text-align: center;
+`

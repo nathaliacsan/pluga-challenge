@@ -1,5 +1,5 @@
 import * as Dialog from '@radix-ui/react-dialog'
-import { Content, ModalContainer, Overlay } from './styles'
+import { Content, ModalContainer, Overlay, Title } from './styles'
 
 interface ToolProps {
   color: string
@@ -17,7 +17,7 @@ export function OpenToolModal({ color, icon, link, name }: ToolProps) {
         <ModalContainer variant={color}>
           <img src={icon} alt="" />
           <div>
-            <Dialog.Title>{name}</Dialog.Title>
+            <Title>{name}</Title>
             <a href={link} target="_blank" rel="noreferrer">
               Acessar
             </a>

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SearchFormContainer = styled.form`
+export const SearchToolsContainer = styled.form`
   display: flex;
   align-items: center;
   margin: 2rem auto 0; //centralizar
