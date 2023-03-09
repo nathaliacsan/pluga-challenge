@@ -14,7 +14,6 @@ interface BackgroundHeighlightProps {
 }
 
 export const Content = styled(Dialog.Content)<BackgroundHeighlightProps>`
-  width: 60vw;
   min-width: 32rem;
   border-radius: 6px;
   padding: 2.5rem 3rem;
@@ -32,12 +31,10 @@ export const ModalContainer = styled.div<BackgroundHeighlightProps>`
   justify-content: center;
   gap: 5rem;
   margin-bottom: 40px;
-
   img {
     border-radius: 50%;
     max-width: 100px;
   }
-
   div {
     display: flex;
     align-items: center;
@@ -45,7 +42,6 @@ export const ModalContainer = styled.div<BackgroundHeighlightProps>`
     gap: 1rem;
     color: #fff;
   }
-
   a {
     border: 1px solid ${(props) => props.variant};
     display: block;
@@ -57,18 +53,8 @@ export const ModalContainer = styled.div<BackgroundHeighlightProps>`
     border-radius: 15px;
     text-decoration: none;
     text-align: center;
-
     :hover {
       background: #e1dede;
     }
   }
-`
-
-export const Title = styled(Dialog.Title)`
-  text-align: center;
-`
-
-export const LastToolsContainer = styled.div`
-  width: 100%;
-  background: #fff;
 `

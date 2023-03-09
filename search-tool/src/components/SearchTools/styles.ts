@@ -5,6 +5,7 @@ export const SearchToolsContainer = styled.form`
   align-items: center;
   margin: 2rem auto 0; //centralizar
   padding: 2rem 4rem;
+  width: 100%;
 
   input {
     flex: 1;
